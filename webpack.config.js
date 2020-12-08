@@ -17,6 +17,14 @@ const config = function (webpackMode) {
             filename: "[name].js",
             path: path.resolve(__dirname, "dist"),
         },
+        resolve: {
+          // Polyfills for node libraries that are no longer provided by default in Webpack 5
+          fallback: {
+            "http": require.resolve("stream-http"),
+            "https": require.resolve("https-browserify"),
+            "buffer": require.resolve("buffer/")
+          }
+        }
     };
 };
 

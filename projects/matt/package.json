@@ -24,6 +24,5 @@
         "webpack-cli": "^4.2.0"
     },
     "dependencies": {
-        "react": "^17.0.1"
     }
 }
